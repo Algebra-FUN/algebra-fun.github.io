@@ -29,4 +29,4 @@ s.t.
 \end{cases}
 $$
 3. native image render
-![](./img/tag-bg.jpg)
+![](https://algebra-fun.github.io/img/tag-bg.jpg)
