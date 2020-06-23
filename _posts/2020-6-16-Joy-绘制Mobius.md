@@ -2,9 +2,9 @@
 layout:     post
 title:      Draw a Mobius Strip
 subtitle:   在Python中绘制莫比乌斯环
-date:       2020-6-11
+date:       2020-6-16
 author:     Algebra-FUN
-header-img: img/post-bg-2020-6-11.jpg
+header-img: img/post-bg-2020-6-16.jpg
 catalog: true
 tags:
     - Math
@@ -55,7 +55,7 @@ $$
 
 We are going to draw the Mobius Strip with Numpy and Matplotlib.
 
-1. import the dependencies and set the parameters.
+* import the dependencies and set the parameters.
 
 ```python
 import numpy as np
@@ -67,7 +67,7 @@ R,W=10,10
 a,b=24,20
 ```
 
-2. define the Analytic Expression.
+* define the Analytic Expression.
 
 ```python
 def x(u,v):
@@ -80,7 +80,7 @@ def z(u,v):
 
 > where u,v represent of $$\theta$$ and $$\omega$$
 
-3. calculate the Meshgrid of the graph.
+* calculate the Meshgrid of the graph.
 
 ```python
 u_range = np.linspace(0,2*pi,a)
@@ -91,7 +91,7 @@ uv_meshgrid = np.meshgrid(u_range,v_range) # build the meshgrid of parameter
 X,Y,Z = map(lambda f: f(*uv_meshgrid),(x,y,z)) # calculate the meshgrid of the mobius strip
 ```
 
-4. draw with matplotlib.
+* draw with matplotlib.
 
 ```python
 fig = plt.figure() 
