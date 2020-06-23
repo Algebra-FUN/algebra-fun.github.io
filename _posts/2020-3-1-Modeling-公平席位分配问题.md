@@ -2,7 +2,7 @@
 layout:     post
 title:      公平席位分配问题拓展
 subtitle:   数模课作业2
-date:       2020-3-7
+date:       2020-3-1
 author:     Algebra-FUN
 header-img: img/post-bg-2020-3-1.jpg
 catalog: true
