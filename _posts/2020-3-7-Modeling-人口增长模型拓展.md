@@ -4,7 +4,7 @@ title:      人口增长模型拓展
 subtitle:   数模课作业1
 date:       2020-3-7
 author:     Algebra-FUN
-header-img: https://thumbs.dreamstime.com/b/%E8%8A%82infographic%E4%BC%A0%E6%9F%93%E5%AA%92-%E4%BE%8B%E8%AF%81%E3%80%82%E4%B8%96%E7%95%8C%E5%9C%B0%E5%9B%BE%E5%92%8C%E4%BF%A1%E6%81%AF%E5%9B%BE%E8%A1%A8-39636452.jpg
+header-img: img/post-bg-2020-3-7.jpg
 catalog: true
 tags:
     - Math
