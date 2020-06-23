@@ -18,6 +18,7 @@ First of all, we need to figure out the Math Analytic Expression of the Mobius S
 
 ## Math Analytic Expression
 You can easily get this expression if you have a good command of **Analytic Geometry**.
+
 $$
 \begin{cases}
 x=(r+\omega\cos(\beta))\cos(\theta)\\
@@ -36,6 +37,7 @@ $$
 When it is classic Mobius strip, then $$\beta=\frac{\theta}2$$.
 
 Substitute the $$\beta$$ in the expression, then you can get this expression:
+
 $$
 \begin{cases}
 x=(r+\omega\cos(\frac{\theta}2))\cos(\theta)\\
