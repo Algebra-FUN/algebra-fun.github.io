@@ -12,7 +12,7 @@ github_repo: "https://github.com/algebra-fun/algebra.github.io.git" # you code r
 # Sidebar settings
 sidebar: true                        # whether or not using Sidebar.
 sidebar-about-description: "Under Construction"
-sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/avatar-0.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
