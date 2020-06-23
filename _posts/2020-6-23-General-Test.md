@@ -14,8 +14,10 @@ tags:
 
 # Test for My Blog Construction
 1. import online image by url
+
 ![](http://img.1sucai.com/tuku/yulantu/110923/8881-1109230Q91167.jpg)
 2. math block render
+
 $$
 \begin{cases}
 x=(r+\omega\cos(\frac{\theta}2))\cos(\theta)\\
