@@ -11,8 +11,8 @@ tags:
     - GitHub Page
 ---
 # Test for My Blog Construction
-> Under Construction!
-> Please Wait!
+> Under Construction!Please Wait!
+
 1. import online image by url
 ![](http://img.1sucai.com/tuku/yulantu/110923/8881-1109230Q91167.jpg)
 2. math block render
