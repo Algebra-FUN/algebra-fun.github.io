@@ -146,7 +146,7 @@ ALL RIGHTS RESERVED.
 
 我们得到实际人口与预测人口的比较如下图和表：
 
-![](https://raw.githubusercontent.com/Algebra-FUN/My-Math-Model/master/1/output/resul)
+![](https://raw.githubusercontent.com/Algebra-FUN/My-Math-Model/master/1/output/result.png)
 
 | year | population | prediction |  loss  |
 | :--: | :--------: | :--------: | :----: |
