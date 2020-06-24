@@ -22,9 +22,9 @@ tags:
 
 ## 实验效果
 
-![](https://github.com/Algebra-FUN/B-CA-Infection-Simulation/tree/master/img/50days.gif?raw=true)
+![](https://github.com/Algebra-FUN/B-CA-Infection-Simulation/blob/master/img/50days.gif?raw=true)
 
-![](https://github.com/Algebra-FUN/B-CA-Infection-Simulation/tree/master/img/100days.gif?raw=true)
+![](https://github.com/Algebra-FUN/B-CA-Infection-Simulation/blob/master/img/100days.gif?raw=true)
 
 ## 模型原理
 
