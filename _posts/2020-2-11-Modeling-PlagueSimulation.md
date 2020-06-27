@@ -70,7 +70,7 @@ tags:
 #### move-元胞运动
 
 $$
-(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2 = v
+\sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2}=v
 $$
 
 $$
