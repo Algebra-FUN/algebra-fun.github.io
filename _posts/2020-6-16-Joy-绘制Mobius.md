@@ -151,4 +151,4 @@ the output will be:
 
 ![](https://github.com/Algebra-FUN/My-Math-Model/blob/master/Mobius/Figure_3.png?raw=true)
 
-<iframe src="https://nbviewer.jupyter.org/github/Algebra-FUN/My-Math-Model/blob/master/Mobius/Mobius.ipynb">
+<iframe src="https://nbviewer.jupyter.org/github/Algebra-FUN/My-Math-Model/blob/master/Mobius/Mobius.ipynb" width="100%" style="height:100%;" frameborder="0">
