@@ -150,3 +150,5 @@ When  $$\beta=\theta$$
 the output will be:
 
 ![](https://github.com/Algebra-FUN/My-Math-Model/blob/master/Mobius/Figure_3.png?raw=true)
+
+<iframe src="https://nbviewer.jupyter.org/github/Algebra-FUN/My-Math-Model/blob/master/Mobius/Mobius.ipynb">
