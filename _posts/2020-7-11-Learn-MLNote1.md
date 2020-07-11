@@ -1,0 +1,291 @@
+---
+layout:     post
+title:      Linear Regression with Multiple Variables
+subtitle:   ML Learning Note-1
+date:       2020-7-11
+author:     Algebra-FUN
+header-img: img/post-bg-2020-7-11.png
+catalog: true
+tags:
+    - ML
+    - Math
+---
+
+# Linear Regression with Multiple Variables
+
+> ML Learning Note-1
+>
+> The basic of Linear Model
+
+## Overview
+
+| Section               | Name                          | Expression                                               |
+| --------------------- | ----------------------------- | -------------------------------------------------------- |
+| Model Representation  | Linear Regression Model (LRM) | $$h(x)=\theta_0+\sum_{i=1}^n\theta_ix_i$$                |
+| Cost Function         | Mean Square Error (MSE)       | $$J(\theta)=\frac1{2m}\sum_{j=1}^m(h(x^{(j)})-y^{(j)})$$ |
+| Optimization Method 1 | Batch Gradient Descent (BGD)  |                                                          |
+| Optimization Method 2 | Normal Equation (NE)          |                                                          |
+
+## Notation
+
+| Symbol        | Type                         | Representation                                        |
+| ------------- | ---------------------------- | ----------------------------------------------------- |
+| $$n$$         | $$\mathbb N^+$$              | the number of features                                |
+| $$m$$         | $$\mathbb N^+$$              | the number of training samples                        |
+| $$x^{(i)}$$   | $$\mathbb R^n$$              | the features vector of the $$i^{th}$$ training sample |
+| $$x^{(i)}_j$$ | $$\mathbb R$$                | value of feature j in the $$i^{th}$$ training sample  |
+| $$y^{(i)}$$   | $$\mathbb R$$                | the target value of the $$i^{th}$$ training sample    |
+| $$\hat{x}$$   | $$\mathbb R^{n+1}$$          | $$[1\space  x]^T$$                                    |
+| $$y$$         | $$\mathbb R^m$$              | the vector of all target values of training samples   |
+| $$\theta$$    | $$\mathbb R^{n+1}$$          | the vector of weights of model                        |
+| $$X$$         | $$\mathbb R^{m\times(n+1)}$$ | the matrix of all input values of training samples    |
+
+## Model Representation
+
+### Normal Formula
+
+$$
+h(x)=\theta_0+\sum_{i=1}^n\theta_ix_i
+$$
+
+### Matrix Formula
+
+$$
+h(x)=\theta_0+\sum_{i=1}^n\theta_ix_i\\
+=\hat{x}^T\theta
+$$
+
+$$
+h(X)=
+\begin{bmatrix} 
+1 & {x^{(1)}}^T \\ 
+1 & {x^{(2)}}^T \\ 
+\vdots & \vdots \\
+1 & {x^{(m)}}^T
+\end{bmatrix}
+\begin{bmatrix} 
+\theta_0 \\ 
+\theta_1 \\ 
+\vdots \\
+\theta_n
+\end{bmatrix}
+=X\theta
+$$
+
+### Geometrical Understanding
+
+1. $$h(x)=0$$ represent the (n-1)-dimension hyperplane in n-dimension space 
+2. $$y - h(x)$$ represent the  miss-distance of intercept between y and h(x)
+
+## Cost Function
+
+using `MSE` to measure the similarity of batch of output and target value.
+
+### Normal Formula
+
+$$
+J(\theta)=\frac1{2m}\sum_{j=1}^m(h(x^{(j)})-y^{(j)})
+$$
+
+> where the $$\frac12$$ in J function aimed to cancel the 2 created by derivative.
+
+### Matrix Formula
+
+$$
+J(\theta)=\frac1{2m}(X\theta-y)^T(X\theta-y)
+$$
+
+## Optimization Method
+
+### Optimization Task Representation
+
+| Key        | Item                                           |
+| ---------- | ---------------------------------------------- |
+| Parameters | $$\theta$$                                     |
+| Function   | $$\frac1{2m}\sum_{j=1}^m(h(x^{(j)})-y^{(j)})$$ |
+| Goal       | $$\min_{\theta} J(\theta)$$                    |
+
+$$
+\min_\theta\frac1{2m}\sum_{j=1}^m(h(x^{(j)})-y^{(j)})
+$$
+
+### Gradient Descent Algorithms
+
+#### Normal Modality
+
+$$\alpha$$ here represent `learning rate`
+
+Repeat
+
+$$
+\theta_j:=\theta_j-\alpha\frac{\partial}{\partial\theta_j}J(\theta)\qquad  \forall j\in[1,...,n]\cap \mathbb N
+$$
+
+> simultaneously update for every j = 0,...,n
+
+#### Matrix Modality
+where $$\frac{\partial}{\partial\theta}J(\theta)$$ represent:
+
+$$
+\frac{\partial}{\partial\theta}J(\theta)=
+\begin{bmatrix} 
+\frac{\partial}{\partial\theta_0}J(\theta) \\ 
+\frac{\partial}{\partial\theta_1}J(\theta) \\ 
+\vdots \\
+\frac{\partial}{\partial\theta_n}J(\theta)
+\end{bmatrix}
+$$
+
+so the original formula can be represented as:
+
+$$
+\theta:=
+\begin{bmatrix} 
+\theta_0 \\ 
+\theta_1 \\ 
+\vdots \\
+\theta_n
+\end{bmatrix}
+-\alpha
+\begin{bmatrix} 
+\frac{\partial}{\partial\theta_0}J(\theta) \\ 
+\frac{\partial}{\partial\theta_1}J(\theta) \\ 
+\vdots \\
+\frac{\partial}{\partial\theta_n}J(\theta)
+\end{bmatrix}
+$$
+
+Repeat
+
+$$
+\theta:=\theta-\alpha\frac{\partial}{\partial\theta}J(\theta)
+$$
+
+#### Tips | Tricks | Techniques
+
+##### Feature Scaling
+
+As `Gradient Descent Algorithms` is sensitive to the scale of features which will affect the performance of the algorithms.
+
+As a consequences, we raise the idea to solve this issue.
+
+Idea: Make sure features are on a similar scale.
+
+In `sklearn`, you can use `StandScaler`:
+
+```python
+from sklearn.preprocessing import StandardScaler
+from sklearn.datasets import load_boston
+
+X = load_boston().data  load features of dataset
+scaler = StandardScaler()  init scaler
+
+scaler.fit(X)  scaler fit features
+X = scaler.transfrom(X)  scaler transform features
+X = scaler.fit_transform(X)  fit and transform
+```
+
+##### Inspect the algorithms working
+
+> plotting the figure of No. of iterations-$$ J(\theta)$$
+
+##### Learning Rate Selection
+
+* If $$\alpha$$ is too small: slow convergence :snail:
+* If $$\alpha$$ is too big: the cost function may not decrease on every iterations;may not converge :sweat:
+* so you need to choose a proper $$\alpha$$ in order to make it fast convergence
+
+### Normal Equation
+
+#### The formulas
+
+We can use the tool of `mathematical analysis` to solve this optimization problem.
+
+`Normal Equation`: Method to solve for $$\theta$$ **analytically**.
+
+As $$J(\theta)$$ is a convex function.
+
+So, the condition:
+
+$$
+\theta\space s.t.\frac{\partial}{\partial\theta}J(\theta)=0\Leftrightarrow \theta\space s.t.\min_\theta J(\theta)
+$$
+
+is `necessary and sufficient condition`
+
+As a result, you only need to solve the equation:
+
+$$
+\frac{\partial}{\partial\theta}J(\theta)=0
+$$
+
+$$
+\frac{\partial}{\partial\theta}J(\theta)=\frac{\partial}{\partial\theta}[\frac1{2m}(X\theta-y)^T(X\theta-y)]=0
+$$
+
+$$
+\frac{\partial}{\partial\theta}[(X\theta-y)^T(X\theta-y)]=0
+$$
+
+
+where attention to Partial Derivative formula
+
+$$
+\frac{\partial AX}{\partial X}=A^T
+$$
+
+$$
+\frac{\partial}{\partial\theta}[(X\theta-y)^T(X\theta-y)]=0\\
+\frac{\partial{(X\theta-y)}}{\partial\theta}\frac{\partial}{\partial{(X\theta-y)}}[(X\theta-y)^T(X\theta-y)]=0\\
+X^T(X\theta-y)=0\\
+\theta=(X^TX)^{-1}X^Ty
+$$
+
+#### Issue: non-invertible
+
+you see there is a matrix invert in the formula, but not all of the matrix has its own invert.
+
+when the matrix is singular or degenerate, the matrix can't be invert.
+
+so which $$X$$ will cause the matrix non-invertible?
+
+from linear algebra we learn that:
+
+$$
+\forall X\in \mathbb R^{m\times n},\quad\nexists {(X^TX)}^{-1}\Leftrightarrow rank(X) \neq \max_{M\in\mathbb R^{m\times n}}\{rank(M)\}
+$$
+
+> this condition equivalent to linearly dependent
+
+the common situation:
+
+* Too many features and too less samples: #features > #samples
+
+* Redundant features
+
+  $$
+  \begin{cases}
+  x_1=size\space in\space feet^2\\
+  x_2=size\space in\space m^2
+  \end{cases}
+  $$
+  
+#### Implement
+
+In `python`,you can use `numpy.linalg.pinv` to implement this:
+
+```python
+from numpy.linalg import pinv
+from numpy import matrix
+
+
+def norm_eq_method(X: matrix, y: vector) -> vector:
+    return pinv(X.T@X)@X.T@y
+```
+
+## Practise with Boston Dataset
+
+<iframe src="https://nbviewer.jupyter.org/github/Algebra-FUN/ML-note/blob/master/code/1-LM.ipynb" width="100%" height="100%" frameborder="0">
+
+
+
