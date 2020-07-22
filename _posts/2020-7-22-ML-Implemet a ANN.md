@@ -12,5 +12,5 @@ tags:
     - Python
 ---
 
-<iframe src="https://nbviewer.jupyter.org/github/Algebra-FUN/ML-note/blob/master/code/4-ANN.ipynb" width="100%" height="500%" frameborder="0">
+<iframe src="https://nbviewer.jupyter.org/github/Algebra-FUN/ML-note/blob/master/code/4-ANN.ipynb" width="100%" height="800%" frameborder="0">
 
