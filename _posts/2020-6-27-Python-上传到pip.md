@@ -75,13 +75,34 @@ python setup.py sdist bdist_wheel
 twine upload dist/*
 ```
 
-这个步骤遇到的相关问题：
+### 这个步骤遇到的相关问题：
 
 #### twine安装
 
 ```
 pip install twine
 ```
+
+#### python setup.py bdist_wheel 报错的处理办法
+
+若报错如下图：
+
+```shell
+usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+   or: setup.py --help [cmd1 cmd2 ...]
+   or: setup.py --help-commands
+   or: setup.py cmd --help
+
+error: invalid command 'bdist_wheel'
+```
+
+多半是setuptools版本不正确或者你的环境中没有安装wheel， 请使用一下命令升级：
+
+```shell
+pip install wheel
+pip install --upgrade setuptools
+```
+
 
 #### Pypi注册
 
