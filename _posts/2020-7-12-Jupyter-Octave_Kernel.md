@@ -31,6 +31,8 @@ jupyter notebook
 ### Download
 http://wiki.octave.org/Octave_for_Microsoft_Windows
 
+> DON'T download the latest version, use the stabe version(5.2.0 is the version I use presently)
+
 ### Config Environment Variables
 
 add location to `PATH`
