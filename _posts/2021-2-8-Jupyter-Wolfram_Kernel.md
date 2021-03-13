@@ -28,7 +28,7 @@ tags:
 
 Wolfram Engine is Free and Strong. It's is similar to Python Interpreter. As consequence, we can use a kernel to transfer it to Jupyter.
 
-Download it in this link: https://www.wolfram.com/engine/
+Download it in this link: [https://brilliant.org/wiki/beta-function/](https://www.wolfram.com/engine/)
 
 Download and install and activate it, as the web page follow.
 
