@@ -46,7 +46,7 @@ If you can see julia here, indicating it has been installed successfully. And al
 
 ### If failed
 
-However, may be you can see the julia kernel in the list, you can use following script to solve this problem manually.
+However, may be you can't see the julia kernel in the list, you can use following script to solve this problem manually.
 
 ```Julia
 using IJulia
