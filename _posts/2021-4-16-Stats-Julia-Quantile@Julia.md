@@ -28,7 +28,7 @@ Today, we are going to teach you how to get the quantile of a specific distribut
 	```julia
 	using Pkg
 	Pkg.add("Distribution")
-	``
+	```
 3. Import the package `Distribution`
 	```julia
 	using Distribution

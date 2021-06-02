@@ -53,6 +53,4 @@ using IJulia
 installkernel("Julia", "--depwarn=no")
 ```
 
-And check again.
-
-## 
+And check again. 
