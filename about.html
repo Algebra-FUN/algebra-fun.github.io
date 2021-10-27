@@ -1,44 +1,86 @@
 ---
 layout: page
-title: "About"
-description: "Under Construction!"
+title: "Algebra-FUN"
+description: "Self-introduction"
 header-img: "img/post-bg-rwd.jpg"
 ---
 
 <!-- Language Selector -->
-<!-- <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 Chinese </option>
-    <option value="1"> 英文 English </option>
+<!-- <select class="sel-lang" onchange="onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0"> 简体中文</option>
+    <option value="1" selected> English </option>
 </select> -->
 
-<!-- Chinese Version -->
+<!-- Chinese Version
 <div class="zh post-container">
 
     <!--copied from markdown -->
     <h2>Under Construction!</h2>
-    <img src='http://img.1sucai.com/tuku/yulantu/110923/8881-1109230Q91167.jpg'>
-</div>
+    
+</div> -->
 
 <!-- English Version -->
-<!-- <div class="en post-container">
-    <blockquote><p>Yet another iOS Developer. <br>
-    Yet another Life-long Student.</p></blockquote>
+<div class="en post-container">
+    <h1>Yifei Fan</h1>
+    <h2>Basic Info</h2>
+    <p>Email: <a href='mailto:algebra_fun@163.com' target='_blank' class='url'>algebra_fun@163.com</a></p>
+    <p>Tel: +86 18810064808</p>
+    <p>Address: No.9, Dongsi 12th Alley, DongCheng District, Beijing</p>
+    <p>Github: <a href='https://github.com/Algebra-FUN' target='_blank' class='url'>https://github.com/Algebra-FUN</a>
+    </p>
+    <h2>Education</h2>
+    <p>9/2018-7/2022 BSc of Mathematics and Applied Mathematics in Tianjin University. </p>
+    <p><strong>GPA</strong>: 3.67/4 <strong>Class Ranking</strong>: 11/99</p>
+    <p><strong>Language level</strong>: Toefl 98 (reading 29, listening 26, speaking 20, writing 23) 22/07/2021</p>
+    <h2>Experience</h2>
+    <p><strong>19/7/2021 - 15/8/2021</strong></p>
+    <p>Assistant of Data analysis in SUZHOU NANOMICRO TECHNOLOGY CO., LTD</p>
+    <p>Responsibility：</p>
+    <ol start=''>
+        <li>to establish a preliminary mathematical statistical model based on experimental data and production data
+        </li>
+        <li>to analyze experimental data and carry on statistical modeling</li>
+        <li>to analyze data for process optimization of “MicroSphere”</li>
 
-    <p>Hi, I am <strong>Baiying Qiu</strong>，you can call me <strong>BY</strong>. I am an iOS software engineer and currently working in Xiamen</p>
+    </ol>
+    <p> </p>
+    <p><strong>9/2018-12/2019</strong></p>
+    <p>TWT Studio(Student club under Student Affairs Office), Front-end developer as a web developer</p>
+    <p> </p>
+    <p><strong>3/2019-</strong></p>
+    <p>Join GitHub and contribute to one open source projects <a
+            href='https://github.com/Algebra-FUN/WeReadScan'>WeReadScan</a></p>
+    <p> </p>
+    <h4>Others</h4>
+    <p>Practice of computer language, focusing on Python programming(17/8/2020-4/9/2020)</p>
+    <p>Practice of statistical calculation, focusing on R language program practice and statistical
+        practice(5/2021-6/2021)</p>
+    <p>Practice of production, focusing on Python language program practice and PyTorch(23/8/2021-3/9/2021)</p>
+    <p>Practice of mathematica experiment, focusing on Mathematica language program(3/2021-4/2021)</p>
+    <h2><strong>Skills/Awards</strong></h2>
+    <h3><strong>SKILLS</strong>：</h3>
+    <p>National Computer Rank Examination L2</p>
+    <p>Master programming languages, including <img alt="Python"
+            src="https://img.shields.io/badge/Python-14354C.svg?style=for-the-badge&logo=python&logoColor=white" />,
+        <img alt="Julia"
+            src="https://img.shields.io/badge/Julia-9558B2?style=for-the-badge&logo=julia&logoColor=white" />, <img
+            alt="Javascript"
+            src="https://img.shields.io/badge/Javascript-e2470f?style=for-the-badge&logo=Javascript&logoColor=white" />,
+        <img alt="R" src="https://img.shields.io/badge/r-276DC3?style=for-the-badge&logo=r&logoColor=white" />, <img
+            alt="Mathematica"
+            src="https://img.shields.io/badge/Wolfram%20Language-DD1100?style=for-the-badge&logo=Wolfram%20Language&logoColor=white" />
+        etc.</p>
+    <h3><strong>AWARDS</strong>：</h3>
+    <ol start=''>
+        <li>Mathematical Contest in Modeling, 2/2020 <strong>Honorable Mention</strong>（<strong>United States</strong>）
+        </li>
+        <li>Contemporary Undergraduate Mathematical Contest 10/2020 <strong>Second Prize (Tianjin, China)</strong>,
+        </li>
+        <li>China University computer competition-WeChat applet application development competition 8/2019 <strong>Third
+                Prize (China)</strong></li>
 
-    <p>This is my personal blog, through making Github Pages and Jekyll.My GitHub  👉 <a href="http://github.com/qiubaiying">Github·BY</a>.</p>
-    
-    <p>I am a sports enthusiast, I like fitness, running and boxing.</p>
-
-    <h5>Talks</h5>
-
-    <ul>
-    <li><a href="https://github.com">GitHub</a></li>
-    <li><a href="http://jekyll.com.cn/">jekyll</a></li>
-    <li><a href="https://pages.github.com/">GitHub Pages</a></li>
-    <li><a href="https://qiubaiying.github.io">BY</a></li>
-    </ul>
-</div> -->
+    </ol>
+</div>
 
 <!-- Handle Language Change -->
 <script type="text/javascript">
@@ -51,28 +93,28 @@ header-img: "img/post-bg-rwd.jpg"
     window.addEventListener('hashchange', _render);
 
     // handle render
-    function _render(){
+    function _render() {
         var _hash = window.location.hash;
         // en
-        if(_hash == "#en"){
-            $select.selectedIndex = 1;
+        if (_hash == "#zh") {
+            $select.selectedIndex = 0;
             $en.style.display = "block";
             $zh.style.display = "none";
-        // zh by default
-        }else{
+            // zh by default
+        } else {
             // not trigger onChange, otherwise cause a loop call.
-            $select.selectedIndex = 0;
+            $select.selectedIndex = 1;
             $zh.style.display = "block";
             $en.style.display = "none";
         }
     }
 
     // handle select change
-    function onLanChange(index){
-        if(index == 0){
-            window.location.hash = "#zh"
-        }else{
+    function onLanChange(index) {
+        if (index == 0) {
             window.location.hash = "#en"
+        } else {
+            window.location.hash = "#zh"
         }
     }
 
@@ -88,14 +130,14 @@ header-img: "img/post-bg-rwd.jpg"
 <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
 
 <div id="gitalk-container"></div>
-    <script type="text/javascript">
+<script type="text/javascript">
     var gitalk = new Gitalk({
-    clientID: '{{site.gitalk.clientID}}',
-    clientSecret: '{{site.gitalk.clientSecret}}',
-    repo: '{{site.gitalk.repo}}',
-    owner: '{{site.gitalk.owner}}',
-    admin: ['{{site.gitalk.admin}}'],
-    distractionFreeMode: {{site.gitalk.distractionFreeMode}},
+        clientID: '{{site.gitalk.clientID}}',
+        clientSecret: '{{site.gitalk.clientSecret}}',
+        repo: '{{site.gitalk.repo}}',
+        owner: '{{site.gitalk.owner}}',
+        admin: ['{{site.gitalk.admin}}'],
+        distractionFreeMode: {{ site.gitalk.distractionFreeMode }},
     id: 'about',
     });
     gitalk.render('gitalk-container');
@@ -103,7 +145,7 @@ header-img: "img/post-bg-rwd.jpg"
 {% endif %}
 <!-- Gitalk end -->
 
- <!-- disqus 评论框 start  -->
+<!-- disqus 评论框 start  -->
 {% if site.disqus.enable %}
 
 <div class="comment">
@@ -119,7 +161,7 @@ header-img: "img/post-bg-rwd.jpg"
     var disqus_identifier = "{{site.disqus.username}}/{{page.url}}";
     var disqus_url = "{{site.url}}{{page.url}}";
 
-    (function() {
+    (function () {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
@@ -127,4 +169,3 @@ header-img: "img/post-bg-rwd.jpg"
 </script>
 <!-- disqus 公共JS代码 end -->
 {% endif %}
-
